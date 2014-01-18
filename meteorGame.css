@@ -1,0 +1,10 @@
+/* CSS declarations go here */
+
+#login-buttons {
+  padding-top: 13px;
+  padding-left: 20px;
+}
+
+button.start {
+  margin-top: 25%;
+}

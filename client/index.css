@@ -1,0 +1,69 @@
+#main {
+  margin-top: 20px;
+  text-align: center;
+}
+
+#board {
+  border: 4px solid #999;
+  border-radius: 4px;
+  padding: 2px;
+  width: 400px;
+  height: 400px;
+  background-color: #999;
+}
+
+.square {
+  cursor: pointer;
+  width: 98px;
+  height: 98px;
+  border: 1px solid #BBB;
+  margin: 0px;
+  text-align: center;
+  background-color: #eeeee8;
+  float: left;
+}
+
+.top-left.square {
+  border-radius: 4px 0 0 0;
+}
+
+.top-right.square {
+  border-radius: 0 4px 0 0;
+}
+
+.bottom-left.square {
+  border-radius: 0 0 0 4px;
+}
+
+.bottom-right.square {
+  border-radius: 0 0 4px 0;
+}
+
+#dice {
+  height: 75px;
+  width: 75px;
+  border: 4px solid black;
+  border-radius: 4px;
+  text-align: center;
+  box-shadow: 5px 5px 5px #888;
+  margin-bottom: 20px;
+}
+
+#dice-number {
+  cursor: pointer;
+  font-size: 65px;
+  line-height: 75px;
+}
+
+#dice-number.disabled-dice {
+  background-color: #BBB;
+  cursor: not-allowed;
+}
+
+#actions {
+  height: 200px;
+}
+
+.move-btn {
+  width: 100%;
+}
