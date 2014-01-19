@@ -11,12 +11,16 @@
   <div id="main">
     <div class="container">
       <div class="row">
-        <div class="span8">
-          {{> board }}
-        </div>
-        <div class="span4">
-          {{> controls }}
-        </div>
+        {{#if turn}}
+          <div class="span8">
+            {{> board }}
+          </div>
+          <div class="span4">
+            {{> controls }}
+          </div>
+        {{else}}
+          {{> login}}
+        {{/if}}
       </div>
     </div>
   </div>
