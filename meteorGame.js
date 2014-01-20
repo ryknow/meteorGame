@@ -29,7 +29,7 @@ var cell = function(index, additional_class) {
       this.cell_num + (row_size - 1)
     ]
   }
-}
+};
 
 new_board: function() {
   var board = [];
@@ -58,4 +58,10 @@ new_board: function() {
   }
   
   return board;
-}
+};
+
+if (Meteor.isServer) {
+  Meteor.publish('games', function(id) {
+    return Games.find({_id: id});
+  });
+};
