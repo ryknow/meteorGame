@@ -1,3 +1,7 @@
+Meteor.subscribe("games");
+
+var game = Games.findOne();
+
 Template.page.turn = function() {
   return Session.get("turn");
 };
@@ -73,3 +77,4 @@ Template.finish.events({
     console.log("Finish your turn");
   }
 });
+
