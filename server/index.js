@@ -9,6 +9,12 @@ Meteor.methods({
                                {fields: {_id: true, name: true}}).fetch();
     Games.update({_id: game_id}, {$set: {players: players}});
     
+    var game  = Games.find({_id: game_id});
+    var board = game.board;
+    
+    place_players();
+    
+    Meteor.publish("place_enemies", players.length * 3);
     // TODO: Loop through players
     // After each gets a turn decrement turns_left by 1 and update the game
     if (turns_left === 0) {
